@@ -5,58 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="CNC助手" />
-<title>CNC 加工參數助手 v1.2 實用預設版</title>
+<title>CNC 加工參數助手 v1.3 S9500 預設版</title>
 <style>
-:root{--bg:#f4f7fb;--card:#fff;--ink:#0f172a;--muted:#65758b;--line:#dce5ef;--brand:#0f172a;--soft:#f1f5f9;--warn:#fff6e8;--warnText:#9a3412;--good:#ecfdf5;--goodText:#047857;--bad:#fff1f2;--badText:#be123c;--blue:#eff6ff;--blueText:#1d4ed8;--shadow:0 12px 34px rgba(15,23,42,.08);--radius:26px}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:linear-gradient(145deg,#f4f7fb,#fff 45%,#eef3f8);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.45}.wrap{max-width:1080px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 16px 36px}.hero{background:linear-gradient(135deg,#07111f,#111c2e);color:white;border-radius:32px;padding:20px;box-shadow:var(--shadow)}.pill{display:inline-flex;gap:8px;align-items:center;border-radius:999px;background:rgba(255,255,255,.1);padding:7px 12px;font-size:13px;color:#cbd5e1;margin-bottom:10px}h1{font-size:30px;margin:0 0 8px;font-weight:950;letter-spacing:-.03em}.hero p{margin:0;color:#cbd5e1;font-size:15px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.quick div{background:rgba(255,255,255,.08);border-radius:18px;padding:10px;text-align:center;font-size:13px}.quick b{display:block;font-size:17px;color:white}.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}.tab{border:1px solid var(--line);background:white;border-radius:24px;padding:17px 12px;font-size:20px;font-weight:950;box-shadow:0 6px 18px rgba(15,23,42,.04);color:var(--ink)}.tab.active{background:var(--brand);color:white;border-color:var(--brand)}.panel{display:none}.panel.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.grid{display:grid;gap:16px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}h1{font-size:27px}.tab{font-size:18px}.quick{grid-template-columns:repeat(3,1fr)}}label{display:block;font-size:15px;color:#334155;font-weight:850;margin-bottom:8px}.field{margin-bottom:16px}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:20px;background:white;color:var(--ink);font-size:22px;font-weight:850;padding:15px 16px;outline:none;min-height:58px;appearance:auto;-webkit-appearance:auto}textarea{min-height:108px;font-size:17px;font-weight:650;resize:vertical}.unit{position:relative}.unit input{padding-right:86px}.unit span{position:absolute;right:17px;top:50%;transform:translateY(-50%);font-weight:950;color:#64748b;font-size:18px}.hint{background:var(--warn);color:var(--warnText);border-radius:22px;padding:16px;font-weight:800;margin-top:6px}.info{background:var(--blue);color:var(--blueText);border-radius:22px;padding:16px;font-weight:800;margin-top:6px}.muted{color:var(--muted);font-size:14px}.title{font-size:28px;font-weight:950;margin:0 0 18px;letter-spacing:-.03em}.subTitle{font-size:21px;font-weight:950;margin:0 0 12px}.result{background:#f8fafc;border:1px solid var(--line);border-radius:22px;padding:17px}.result .k{font-size:14px;color:var(--muted);font-weight:850}.result .v{font-size:30px;font-weight:950;margin-top:4px;letter-spacing:-.03em}.result .s{font-size:13px;color:var(--muted);margin-top:3px}.darkbox{background:#07111f;color:white;border-radius:24px;padding:17px}.darkbox p{margin:6px 0 0;color:#cbd5e1;font-size:15px}.btn{border:0;border-radius:20px;background:var(--brand);color:white;padding:14px 16px;font-size:17px;font-weight:950;min-height:54px}.btn.ghost{background:white;color:var(--brand);border:1px solid var(--line)}.btn.warn{background:#9a3412}.btn.full{width:100%}.btnRow{display:flex;gap:10px;flex-wrap:wrap}.matCard,.troubleBtn,.note,.refRow{border:1px solid var(--line);background:white;border-radius:24px;padding:17px;box-shadow:0 8px 24px rgba(15,23,42,.04)}.matCard h3{margin:0;font-size:21px}.matCard p{margin:8px 0 14px;color:var(--muted)}.tagrow{display:flex;gap:8px;flex-wrap:wrap}.tag{background:var(--soft);border-radius:999px;padding:7px 10px;font-size:13px;font-weight:900;color:#334155}.troubleBtn{text-align:left;font-size:17px;font-weight:950;color:var(--ink)}.troubleBtn.active{background:var(--brand);color:white}.listBox{border-radius:24px;padding:17px}.bad{background:var(--bad);color:var(--badText)}.good{background:var(--good);color:var(--goodText)}ul{padding-left:20px;margin:8px 0 0}li{margin:7px 0;font-weight:750}.footer{color:var(--muted);font-size:13px;text-align:center;padding:16px}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f1f5f9;border-radius:12px;padding:3px 7px}.hide{display:none!important}.warnText{color:#be123c;font-weight:950}.okText{color:#047857;font-weight:950}.miniTable{width:100%;border-collapse:separate;border-spacing:0 8px}.miniTable th{text-align:left;font-size:13px;color:#64748b}.miniTable td{background:#f8fafc;padding:10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-weight:800}.miniTable td:first-child{border-left:1px solid var(--line);border-radius:14px 0 0 14px}.miniTable td:last-child{border-right:1px solid var(--line);border-radius:0 14px 14px 0}.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.seg button{border:1px solid var(--line);background:white;border-radius:18px;padding:12px 8px;font-size:16px;font-weight:950;color:var(--ink)}.seg button.active{background:#0f172a;color:white}.small{font-size:12px;color:#64748b;font-weight:700}.dangerBorder{border-color:#fecdd3;background:#fff1f2}.copyline{font-size:15px;line-height:1.7;color:#334155}
+:root{--bg:#f4f7fb;--card:#fff;--ink:#0f172a;--muted:#64748b;--line:#dce5ef;--brand:#0f172a;--soft:#f1f5f9;--warn:#fff7ed;--warnText:#9a3412;--good:#ecfdf5;--goodText:#047857;--bad:#fff1f2;--badText:#be123c;--blue:#eff6ff;--blueText:#1d4ed8;--shadow:0 12px 34px rgba(15,23,42,.08);--radius:26px}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:linear-gradient(145deg,#f4f7fb,#fff 45%,#eef3f8);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.45}.wrap{max-width:1080px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top)) 16px 36px}.hero{background:linear-gradient(135deg,#07111f,#111c2e);color:white;border-radius:32px;padding:20px;box-shadow:var(--shadow)}.pill{display:inline-flex;gap:8px;align-items:center;border-radius:999px;background:rgba(255,255,255,.1);padding:7px 12px;font-size:13px;color:#cbd5e1;margin-bottom:10px}h1{font-size:30px;margin:0 0 8px;font-weight:950;letter-spacing:-.03em}.hero p{margin:0;color:#cbd5e1;font-size:15px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.quick div{background:rgba(255,255,255,.08);border-radius:18px;padding:10px;text-align:center;font-size:13px}.quick b{display:block;font-size:17px;color:white}.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}.tab{border:1px solid var(--line);background:white;border-radius:24px;padding:17px 12px;font-size:20px;font-weight:950;box-shadow:0 6px 18px rgba(15,23,42,.04);color:var(--ink)}.tab.active{background:var(--brand);color:white;border-color:var(--brand)}.panel{display:none}.panel.active{display:block}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.grid{display:grid;gap:16px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}h1{font-size:27px}.tab{font-size:18px}.quick{grid-template-columns:repeat(3,1fr)}}label{display:block;font-size:15px;color:#334155;font-weight:850;margin-bottom:8px}.field{margin-bottom:16px}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:20px;background:white;color:var(--ink);font-size:22px;font-weight:850;padding:15px 16px;outline:none;min-height:58px;appearance:auto;-webkit-appearance:auto}textarea{min-height:108px;font-size:17px;font-weight:650;resize:vertical}.unit{position:relative}.unit input{padding-right:90px}.unit span{position:absolute;right:17px;top:50%;transform:translateY(-50%);font-weight:950;color:#64748b;font-size:18px}.hint{background:var(--warn);color:var(--warnText);border-radius:22px;padding:16px;font-weight:800;margin-top:6px}.info{background:var(--blue);color:var(--blueText);border-radius:22px;padding:16px;font-weight:800;margin-top:6px}.muted{color:var(--muted);font-size:14px}.title{font-size:28px;font-weight:950;margin:0 0 18px;letter-spacing:-.03em}.subTitle{font-size:21px;font-weight:950;margin:0 0 12px}.result{background:#f8fafc;border:1px solid var(--line);border-radius:22px;padding:17px}.result .k{font-size:14px;color:var(--muted);font-weight:850}.result .v{font-size:30px;font-weight:950;margin-top:4px;letter-spacing:-.03em}.result .s{font-size:13px;color:var(--muted);margin-top:3px}.darkbox{background:#07111f;color:white;border-radius:24px;padding:17px}.darkbox p{margin:6px 0 0;color:#cbd5e1;font-size:15px}.btn{border:0;border-radius:20px;background:var(--brand);color:white;padding:14px 16px;font-size:17px;font-weight:950;min-height:54px}.btn.ghost{background:white;color:var(--brand);border:1px solid var(--line)}.btn.full{width:100%}.btnRow{display:flex;gap:10px;flex-wrap:wrap}.matCard,.troubleBtn,.note,.refRow{border:1px solid var(--line);background:white;border-radius:24px;padding:17px;box-shadow:0 8px 24px rgba(15,23,42,.04)}.matCard h3{margin:0;font-size:21px}.matCard p{margin:8px 0 14px;color:var(--muted)}.tagrow{display:flex;gap:8px;flex-wrap:wrap}.tag{background:var(--soft);border-radius:999px;padding:7px 10px;font-size:13px;font-weight:900;color:#334155}.troubleBtn{text-align:left;font-size:17px;font-weight:950;color:var(--ink)}.troubleBtn.active{background:var(--brand);color:white}.listBox{border-radius:24px;padding:17px}.bad{background:var(--bad);color:var(--badText)}.good{background:var(--good);color:var(--goodText)}ul{padding-left:20px;margin:8px 0 0}li{margin:7px 0;font-weight:750}.footer{color:var(--muted);font-size:13px;text-align:center;padding:16px}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f1f5f9;border-radius:12px;padding:3px 7px}.warnText{color:#be123c;font-weight:950}.okText{color:#047857;font-weight:950}.miniTable{width:100%;border-collapse:separate;border-spacing:0 8px;min-width:760px}.tableWrap{overflow:auto}.miniTable th{text-align:left;font-size:13px;color:#64748b;white-space:nowrap}.miniTable td{background:#f8fafc;padding:10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-weight:800;vertical-align:top}.miniTable td:first-child{border-left:1px solid var(--line);border-radius:14px 0 0 14px}.miniTable td:last-child{border-right:1px solid var(--line);border-radius:0 14px 14px 0}.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.seg button{border:1px solid var(--line);background:white;border-radius:18px;padding:12px 8px;font-size:16px;font-weight:950;color:var(--ink)}.seg button.active{background:#0f172a;color:white}.small{font-size:12px;color:#64748b;font-weight:700}.copyline{font-size:15px;line-height:1.7;color:#334155}.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:8px;padding:1px 6px;background:white}.notice{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:22px;padding:14px;color:#334155;font-weight:750}.rowSmall{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}@media(max-width:760px){.rowSmall{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <section class="hero">
-    <div class="pill">⚙️ CNC 加工參數助手 v1.2｜實用預設版</div>
-    <h1>銑刀・鑽頭・合理預設</h1>
-    <p>這版改成現場保守值，不照廠商表全開。鋁合金 D12 / 4刃 / S4200 時，預設會落在 F 約 700~1000，F1200 會顯示接近上限。</p>
-    <div class="quick"><div><b>RPM</b>可手動固定</div><div><b>F</b>自動限速</div><div><b>fz</b>防誤填</div></div>
+    <div class="pill">⚙️ CNC 加工參數助手 v1.3｜S9500 預設版</div>
+    <h1>銑刀・鑽頭・網路資料預設</h1>
+    <p>預設值改成參考刀具廠商/加工公式後，再用「現場保守起刀」方式整理。你的機台最高轉速已預設為 <b>S9500</b>，自動計算時不會超過。</p>
+    <div class="quick"><div><b>S9500</b>轉速上限</div><div><b>Vc/fz</b>合理預設</div><div><b>F</b>不硬套上限</div></div>
   </section>
 
   <div class="tabs">
-    <button class="tab active" data-tab="milling">銑刀參數</button>
+    <button class="tab active" data-tab="settings">機台設定</button>
+    <button class="tab" data-tab="milling">銑刀參數</button>
     <button class="tab" data-tab="drilling">鑽頭參數</button>
-    <button class="tab" data-tab="reference">材料預設</button>
+    <button class="tab" data-tab="reference">預設表</button>
     <button class="tab" data-tab="trouble">異常判斷</button>
     <button class="tab" data-tab="notes">加工筆記</button>
   </div>
 
-  <section id="milling" class="panel active">
+  <section id="settings" class="panel active">
+    <div class="card">
+      <h2 class="title">機台設定</h2>
+      <div class="grid grid2">
+        <div class="field">
+          <label>最高主軸轉速 S</label>
+          <div class="unit"><input id="maxRpm" inputmode="numeric" value="9500"><span>rpm</span></div>
+          <div class="muted">依你說的機台最高使用 S9500，已設為預設。</div>
+        </div>
+        <div class="field">
+          <label>預設強度</label>
+          <div class="seg" id="modeSeg">
+            <button type="button" data-mode="safe" class="active">保守</button>
+            <button type="button" data-mode="normal">一般</button>
+            <button type="button" data-mode="upper">偏高</button>
+          </div>
+          <div class="muted" style="margin-top:8px">第一次加工建議保守；聲音、排屑、刀痕穩定後再加。</div>
+        </div>
+      </div>
+      <div class="notice">這版取消「F1200 這種固定進給上限」邏輯，只保留機台轉速上限。若你手動輸入固定 S，會用該 S 計算 F；若空白，會用 Vc 自動算 S，並套用 S9500 上限。</div>
+    </div>
+
+    <div class="card">
+      <h2 class="title">快速範例</h2>
+      <div class="rowSmall">
+        <button class="btn ghost" id="exAlu12">鋁 D12 4刃</button>
+        <button class="btn ghost" id="exS45C10">S45C D10</button>
+        <button class="btn ghost" id="exSus8">SUS304 D8</button>
+        <button class="btn ghost" id="exDrill68">鑽孔 Ø6.8</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="milling" class="panel">
     <div class="card">
       <h2 class="title">銑刀參數</h2>
       <div class="grid grid2">
-        <div class="field">
-          <label>材料</label>
-          <select id="millMat">
-            <option value="aluminum">鋁合金 / AL6061</option>
-            <option value="s45c">S45C / 中碳鋼</option>
-            <option value="sus304">SUS304 / 不鏽鋼</option>
-            <option value="skd11">SKD11 / 模具鋼</option>
-            <option value="copper">銅 / 黃銅</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>刀具材質</label>
-          <select id="millTool">
-            <option value="carbide">鎢鋼 / Carbide</option>
-            <option value="hss">高速鋼 / HSS</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label>預設強度</label>
-        <div class="seg">
-          <button type="button" data-mode="safe" class="active">保守</button>
-          <button type="button" data-mode="normal">一般</button>
-          <button type="button" data-mode="upper">上限</button>
-        </div>
-        <div class="muted" style="margin-top:8px">建議先用「保守」。聲音穩、排屑好，再改「一般」。上限不等於一定安全。</div>
+        <div class="field"><label>材料</label><select id="millMat"></select></div>
+        <div class="field"><label>刀具材質</label><select id="millTool"><option value="carbide">鎢鋼 / Carbide</option><option value="hss">高速鋼 / HSS</option></select></div>
       </div>
       <div class="hint" id="millHint">材料提醒</div>
     </div>
@@ -68,31 +78,27 @@
           <div class="field"><label>刀徑 D</label><div class="unit"><input id="millD" inputmode="decimal" value="12"><span>mm</span></div></div>
           <div class="field"><label>刃數 Z</label><div class="unit"><input id="millZ" inputmode="numeric" value="4"><span>刃</span></div></div>
         </div>
-        <div class="field"><label>固定轉速 S（可空白，自動用 Vc 算）</label><div class="unit"><input id="millS" inputmode="numeric" value="4200"><span>rpm</span></div><div class="muted">你常用鋁 D12 可直接填 4200。</div></div>
+        <div class="field"><label>固定轉速 S（可空白，自動用 Vc 算）</label><div class="unit"><input id="millS" inputmode="numeric" value=""><span>rpm</span></div><div class="muted">例如你現場要用 S4200，就填 4200。空白則用 Vc 自動算。</div></div>
         <div class="grid grid2">
           <div class="field"><label>切削速度 Vc</label><div class="unit"><input id="millVc" inputmode="decimal" value=""><span>m/min</span></div><div class="muted">空白＝使用材料預設</div></div>
-          <div class="field"><label>每刃進給 fz</label><div class="unit"><input id="millFz" inputmode="decimal" value=""><span>mm/t</span></div><div class="muted">空白＝使用材料預設；鋁 D12 建議約 0.04~0.07</div></div>
+          <div class="field"><label>每刃進給 fz</label><div class="unit"><input id="millFz" inputmode="decimal" value=""><span>mm/t</span></div><div class="muted">空白＝使用材料預設；正常是小數，不是 2。</div></div>
         </div>
         <div class="grid grid2">
           <div class="field"><label>軸向深度 ap</label><div class="unit"><input id="millAp" inputmode="decimal" value="2"><span>mm</span></div></div>
-          <div class="field"><label>進給上限</label><div class="unit"><input id="millMaxF" inputmode="numeric" value="1200"><span>mm/min</span></div></div>
+          <div class="field"><label>徑向側吃 ae</label><div class="unit"><input id="millAe" inputmode="decimal" value=""><span>mm</span></div><div class="muted">可空白；系統只做提醒。</div></div>
         </div>
-        <div class="btnRow">
-          <button class="btn" id="presetAlu12">套用：鋁 D12 / 4刃 / S4200 / ap2</button>
-          <button class="btn ghost" id="millReset">恢復材料預設</button>
-        </div>
+        <div class="btnRow"><button class="btn ghost" id="millReset">套用目前材料預設</button></div>
       </div>
 
       <div class="card">
         <h2 class="title">計算結果</h2>
         <div class="grid grid2">
-          <div class="result"><div class="k">建議轉速</div><div class="v" id="millRpmOut">-</div><div class="s">RPM = 1000 × Vc ÷ π ÷ D；若填固定 S，優先用固定 S</div></div>
-          <div class="result"><div class="k">建議進給</div><div class="v" id="millFeedOut">-</div><div class="s" id="millFeedSub">F = RPM × Z × fz</div></div>
-          <div class="result"><div class="k">實際 fz</div><div class="v" id="millFzOut">-</div><div class="s">若被進給上限限制，實際 fz 會跟著下降</div></div>
-          <div class="result"><div class="k">切深提醒</div><div class="v" id="millDepthOut">-</div><div class="s" id="millDepthSub">依材料與現場保守模式判斷</div></div>
+          <div class="result"><div class="k">建議轉速 S</div><div class="v" id="millRpmOut">-</div><div class="s" id="millRpmSub">RPM = 1000×Vc÷π÷D</div></div>
+          <div class="result"><div class="k">實際切削速度 Vc</div><div class="v" id="millActualVcOut">-</div><div class="s">受轉速上限/手動 S 影響</div></div>
+          <div class="result"><div class="k">建議進給 F</div><div class="v" id="millFeedOut">-</div><div class="s">F = S × Z × fz</div></div>
+          <div class="result"><div class="k">使用 fz</div><div class="v" id="millFzOut">-</div><div class="s" id="millPresetSub">材料預設</div></div>
         </div>
-        <div class="info" id="millStatus">狀態提醒</div>
-        <div class="darkbox" style="margin-top:16px"><b>現場調整原則</b><p>尖叫或刀痕重時，先降 ae / ap 或縮短刀具伸出，不要只亂降轉速。鋁加工要排屑順，不然會黏刀。</p></div>
+        <div class="info" id="millStatus" style="margin-top:16px">狀態提醒</div>
       </div>
     </div>
   </section>
@@ -101,40 +107,54 @@
     <div class="card">
       <h2 class="title">鑽頭參數</h2>
       <div class="grid grid2">
-        <div class="field"><label>材料</label><select id="drillMat"><option value="aluminum">鋁合金 / AL6061</option><option value="s45c">S45C / 中碳鋼</option><option value="sus304">SUS304 / 不鏽鋼</option><option value="skd11">SKD11 / 模具鋼</option><option value="copper">銅 / 黃銅</option></select></div>
+        <div class="field"><label>材料</label><select id="drillMat"></select></div>
         <div class="field"><label>鑽頭材質</label><select id="drillTool"><option value="hss">高速鋼 / HSS</option><option value="carbide">鎢鋼 / Carbide</option></select></div>
       </div>
-      <div class="hint" id="drillHint">鑽孔提醒</div>
+      <div class="hint" id="drillHint">材料提醒</div>
     </div>
+
     <div class="grid grid2">
       <div class="card">
         <h2 class="title">輸入</h2>
         <div class="grid grid2">
-          <div class="field"><label>鑽頭直徑</label><div class="unit"><input id="drillD" inputmode="decimal" value="6.8"><span>mm</span></div></div>
+          <div class="field"><label>鑽頭直徑 D</label><div class="unit"><input id="drillD" inputmode="decimal" value="6.8"><span>mm</span></div></div>
           <div class="field"><label>孔深</label><div class="unit"><input id="drillDepth" inputmode="decimal" value="20"><span>mm</span></div></div>
         </div>
+        <div class="field"><label>固定轉速 S（可空白，自動用 Vc 算）</label><div class="unit"><input id="drillS" inputmode="numeric" value=""><span>rpm</span></div></div>
         <div class="grid grid2">
-          <div class="field"><label>固定轉速 S（可空白）</label><div class="unit"><input id="drillS" inputmode="numeric" value=""><span>rpm</span></div></div>
           <div class="field"><label>切削速度 Vc</label><div class="unit"><input id="drillVc" inputmode="decimal" value=""><span>m/min</span></div><div class="muted">空白＝使用材料預設</div></div>
+          <div class="field"><label>每轉進給 fn</label><div class="unit"><input id="drillFn" inputmode="decimal" value=""><span>mm/rev</span></div><div class="muted">鑽孔用 mm/rev，不是每刃進給。</div></div>
         </div>
-        <div class="field"><label>每轉進給</label><div class="unit"><input id="drillFr" inputmode="decimal" value=""><span>mm/rev</span></div><div class="muted">空白＝直徑 × 材料係數。一般標準鑽約 2%~3%D，但這裡用較保守值。</div></div>
-        <button class="btn ghost" id="drillReset">恢復材料預設</button>
+        <div class="btnRow"><button class="btn ghost" id="drillReset">套用目前材料預設</button></div>
       </div>
       <div class="card">
         <h2 class="title">計算結果</h2>
         <div class="grid grid2">
-          <div class="result"><div class="k">建議轉速</div><div class="v" id="drillRpmOut">-</div><div class="s">RPM = 1000 × Vc ÷ π ÷ D</div></div>
-          <div class="result"><div class="k">建議進給</div><div class="v" id="drillFeedOut">-</div><div class="s">F = RPM × mm/rev</div></div>
-          <div class="result"><div class="k">建議啄鑽</div><div class="v" id="drillPeckOut">-</div><div class="s">深孔保守退屑</div></div>
-          <div class="result"><div class="k">孔深倍率</div><div class="v" id="drillRatioOut">-</div><div class="s">超過 3D 建議啄鑽</div></div>
+          <div class="result"><div class="k">建議轉速 S</div><div class="v" id="drillRpmOut">-</div><div class="s">RPM = 1000×Vc÷π÷D</div></div>
+          <div class="result"><div class="k">建議進給 F</div><div class="v" id="drillFeedOut">-</div><div class="s">F = S × fn</div></div>
+          <div class="result"><div class="k">使用 fn</div><div class="v" id="drillFnOut">-</div><div class="s" id="drillPresetSub">材料預設</div></div>
+          <div class="result"><div class="k">孔深倍率 / 啄鑽</div><div class="v" id="drillPeckOut">-</div><div class="s" id="drillRatioOut">-</div></div>
         </div>
-        <div class="info" id="drillStatus">狀態提醒</div>
+        <div class="info" id="drillStatus" style="margin-top:16px">狀態提醒</div>
       </div>
     </div>
   </section>
 
   <section id="reference" class="panel">
-    <div class="card"><h2 class="title">材料預設表</h2><p class="copyline">這些是「現場保守預設」，不是刀具廠商理想上限。若你的刀具是鋁用高效刀、短刃、剛性好、冷卻好，可以再往上調。</p><div id="refList"></div></div>
+    <div class="card">
+      <h2 class="title">銑刀預設表</h2>
+      <p class="copyline">單位：Vc = m/min，fz = mm/tooth。這是「起刀預設」，不是廠商極限。S 會自動受最高轉速限制。</p>
+      <div class="tableWrap" id="millRef"></div>
+    </div>
+    <div class="card">
+      <h2 class="title">鑽頭預設表</h2>
+      <p class="copyline">單位：Vc = m/min，fn = mm/rev。fn 用「鑽徑比例」估算，例如 fn = D×1.8%。</p>
+      <div class="tableWrap" id="drillRef"></div>
+    </div>
+    <div class="card">
+      <h2 class="title">資料依據</h2>
+      <p class="copyline">參考方向：Sandvik 的公式定義、Harvey Tool 的銑削切削速度/ chip load 起始表、OSG 鑽頭每轉進給說明。實際加工仍要依刀具品牌、刀長、刀柄、夾持、冷卻、加工路徑調整。</p>
+    </div>
   </section>
 
   <section id="trouble" class="panel">
@@ -145,31 +165,32 @@
   </section>
 
   <section id="notes" class="panel">
-    <div class="card"><h2 class="title">我的加工筆記</h2><textarea id="noteInput" placeholder="例如：鋁 D12 4刃，S4200，ap2，F900 穩，F1200 偏快..."></textarea><div class="btnRow" style="margin-top:10px"><button class="btn" id="addNote">加入筆記</button><button class="btn ghost" id="clearNotes">清空筆記</button></div><div id="noteList" style="margin-top:16px"></div></div>
+    <div class="card"><h2 class="title">我的加工筆記</h2><textarea id="noteInput" placeholder="例如：鋁 D12 4刃，S4200，ap2，F900 穩，F1200 偏快...\n或：SUS304 D8 4刃，Vc50，fz0.02，聲音穩..."></textarea><div class="btnRow" style="margin-top:10px"><button class="btn" id="addNote">加入筆記</button><button class="btn ghost" id="clearNotes">清空筆記</button></div><div id="noteList" style="margin-top:16px"></div></div>
   </section>
 
-  <div class="footer">v1.2｜公式：RPM = 1000×Vc÷π÷D；銑削 F = RPM×Z×fz；鑽孔 F = RPM×每轉進給。</div>
+  <div class="footer">v1.3｜公式：RPM = 1000×Vc÷π÷D；銑削 F = RPM×Z×fz；鑽孔 F = RPM×fn；最高轉速預設 S9500。</div>
 </div>
 <script>
-const data={
- aluminum:{name:'鋁合金 / AL6061',hint:'鋁的網路/廠商表通常很快，但你現場 D12、S4200、ap2 時，F1200 已經算偏快；本工具預設改成 F 約 700~1000 的保守區。排屑和冷卻要好，避免黏刀。',maxF:1200,depthSafe:2, mill:{carbide:{safe:{vc:140,fz:0.04},normal:{vc:160,fz:0.055},upper:{vc:200,fz:0.07}},hss:{safe:{vc:45,fz:0.018},normal:{vc:60,fz:0.025},upper:{vc:80,fz:0.035}}}, drill:{hss:{vc:60,frCoef:0.012,maxFr:0.16},carbide:{vc:120,frCoef:0.015,maxFr:0.22}}},
- s45c:{name:'S45C / 中碳鋼',hint:'S45C 建議比鋁保守很多。先確認刀長不要過長、冷卻足夠，再慢慢加進給。',maxF:700,depthSafe:1.5, mill:{carbide:{safe:{vc:80,fz:0.025},normal:{vc:100,fz:0.035},upper:{vc:120,fz:0.045}},hss:{safe:{vc:18,fz:0.012},normal:{vc:25,fz:0.018},upper:{vc:30,fz:0.025}}}, drill:{hss:{vc:20,frCoef:0.010,maxFr:0.18},carbide:{vc:60,frCoef:0.012,maxFr:0.22}}},
- sus304:{name:'SUS304 / 不鏽鋼',hint:'SUS304 怕加工硬化。不要讓刀只磨不切；若尖叫，優先降切深/側吃，不要把進給降到太小。冷卻很重要。',maxF:350,depthSafe:0.8, mill:{carbide:{safe:{vc:45,fz:0.018},normal:{vc:60,fz:0.025},upper:{vc:80,fz:0.032}},hss:{safe:{vc:8,fz:0.006},normal:{vc:12,fz:0.010},upper:{vc:16,fz:0.014}}}, drill:{hss:{vc:10,frCoef:0.006,maxFr:0.08},carbide:{vc:35,frCoef:0.008,maxFr:0.12}}},
- skd11:{name:'SKD11 / 模具鋼',hint:'SKD11 要看是否熱處理。未知硬度時請用保守值，切深小一點，注意刀具塗層與剛性。',maxF:300,depthSafe:0.5, mill:{carbide:{safe:{vc:35,fz:0.012},normal:{vc:50,fz:0.018},upper:{vc:65,fz:0.025}},hss:{safe:{vc:6,fz:0.004},normal:{vc:10,fz:0.007},upper:{vc:12,fz:0.010}}}, drill:{hss:{vc:8,frCoef:0.004,maxFr:0.06},carbide:{vc:28,frCoef:0.006,maxFr:0.10}}},
- copper:{name:'銅 / 黃銅',hint:'黃銅較好切，純銅較黏刀。純銅要注意黏刀與毛邊，刀具要利、排屑要順。',maxF:900,depthSafe:1.5, mill:{carbide:{safe:{vc:100,fz:0.028},normal:{vc:150,fz:0.04},upper:{vc:200,fz:0.055}},hss:{safe:{vc:35,fz:0.014},normal:{vc:50,fz:0.02},upper:{vc:70,fz:0.03}}}, drill:{hss:{vc:35,frCoef:0.010,maxFr:0.14},carbide:{vc:80,frCoef:0.012,maxFr:0.18}}}
+const materials={
+ aluminum:{name:'鋁合金 / AL6061、7075',hint:'鋁合金可用較高 Vc，但要重視排屑與防黏刀。2~3刃通常比4刃更適合大量排屑；若使用4刃，先用保守 fz 起刀。',mill:{carbide:{safe:{vc:180,fz:0.035},normal:{vc:240,fz:0.050},upper:{vc:320,fz:0.075}},hss:{safe:{vc:55,fz:0.015},normal:{vc:75,fz:0.025},upper:{vc:95,fz:0.035}}},drill:{hss:{safe:{vc:40,coef:0.012},normal:{vc:55,coef:0.018},upper:{vc:75,coef:0.025}},carbide:{safe:{vc:70,coef:0.015},normal:{vc:100,coef:0.020},upper:{vc:130,coef:0.030}}},ap:{safe:'0.1D~0.25D',normal:'0.25D~0.5D',upper:'看剛性'}},
+ s45c:{name:'S45C / 中碳鋼',hint:'S45C 比鋁保守很多。若刀長長、開槽或側吃大，先降 ap/ae，不要只看轉速。',mill:{carbide:{safe:{vc:70,fz:0.025},normal:{vc:100,fz:0.035},upper:{vc:130,fz:0.050}},hss:{safe:{vc:16,fz:0.010},normal:{vc:22,fz:0.016},upper:{vc:28,fz:0.023}}},drill:{hss:{safe:{vc:16,coef:0.012},normal:{vc:22,coef:0.020},upper:{vc:28,coef:0.026}},carbide:{safe:{vc:45,coef:0.014},normal:{vc:65,coef:0.020},upper:{vc:85,coef:0.026}}},ap:{safe:'0.08D~0.2D',normal:'0.2D~0.4D',upper:'看剛性'}},
+ sus304:{name:'SUS304 / 不鏽鋼',hint:'SUS304 怕加工硬化。不要讓刀只磨不切；若尖叫，優先降 ap/ae 或改善排屑，不要把進給降到太小。',mill:{carbide:{safe:{vc:35,fz:0.014},normal:{vc:50,fz:0.022},upper:{vc:70,fz:0.030}},hss:{safe:{vc:7,fz:0.005},normal:{vc:11,fz:0.009},upper:{vc:15,fz:0.013}}},drill:{hss:{safe:{vc:7,coef:0.006},normal:{vc:10,coef:0.010},upper:{vc:13,coef:0.015}},carbide:{safe:{vc:22,coef:0.008},normal:{vc:32,coef:0.012},upper:{vc:45,coef:0.018}}},ap:{safe:'0.05D~0.15D',normal:'0.15D~0.25D',upper:'小心加工硬化'}},
+ skd11:{name:'SKD11 / 模具鋼',hint:'SKD11 要看是否熱處理。未知硬度時用保守值；硬化後請使用專用刀具與更低切深。',mill:{carbide:{safe:{vc:28,fz:0.010},normal:{vc:42,fz:0.016},upper:{vc:58,fz:0.022}},hss:{safe:{vc:5,fz:0.003},normal:{vc:8,fz:0.006},upper:{vc:10,fz:0.008}}},drill:{hss:{safe:{vc:5,coef:0.004},normal:{vc:7,coef:0.006},upper:{vc:10,coef:0.010}},carbide:{safe:{vc:18,coef:0.006},normal:{vc:28,coef:0.010},upper:{vc:38,coef:0.014}}},ap:{safe:'0.03D~0.1D',normal:'0.1D~0.2D',upper:'看硬度'}},
+ copper:{name:'銅 / 黃銅',hint:'黃銅較好切；純銅較黏刀，刀具要利、排屑要順。若毛邊多，優先檢查刀具銳利度與參數。',mill:{carbide:{safe:{vc:100,fz:0.025},normal:{vc:160,fz:0.040},upper:{vc:230,fz:0.060}},hss:{safe:{vc:30,fz:0.010},normal:{vc:45,fz:0.018},upper:{vc:65,fz:0.028}}},drill:{hss:{safe:{vc:25,coef:0.010},normal:{vc:35,coef:0.016},upper:{vc:50,coef:0.022}},carbide:{safe:{vc:55,coef:0.012},normal:{vc:80,coef:0.018},upper:{vc:110,coef:0.026}}},ap:{safe:'0.08D~0.2D',normal:'0.2D~0.4D',upper:'看材料黏性'}}
 };
-const trouble=[{k:'scream',t:'刀具尖叫 / 震動',c:['刀具伸出太長，剛性不足','側吃或切深太大','轉速與進給不匹配','工件或刀柄夾持不穩'],f:['縮短刀具伸出量','先降低 ae / ap 20%~40%','鋁材可維持足夠 fz，避免只磨不切','檢查虎鉗、刀柄、拉釘與工件固定']},{k:'burn',t:'燒刀 / 刀具變色',c:['轉速太高','進給太小造成摩擦','冷卻或排屑不足','刀具已磨耗'],f:['降低 Vc 10%~30%','不要讓 fz 太小','加強冷卻與吹氣排屑','換刀或改適合塗層']},{k:'drillBreak',t:'鑽頭容易斷',c:['孔太深未退屑','中心孔不準','鑽頭偏擺','進給過大或材料硬點'],f:['超過 3D 改啄鑽','先中心鑽定位','檢查夾頭與鑽頭偏擺','進給降低 10%~20% 後測試']},{k:'rough',t:'表面粗糙 / 刀痕重',c:['刀具磨耗','精修餘量不合理','進給太快','機台、刀柄或工件震動'],f:['換新刀或精修刀','保留穩定精修餘量','精修時降低 F 或 ae','縮短刀具伸出並檢查夾持']},{k:'holeLarge',t:'孔徑變大',c:['鑽頭偏擺','中心孔偏','鑽頭刃口不對稱','一次鑽太深造成偏移'],f:['先打中心孔','檢查鑽頭與夾頭偏擺','深孔分段退屑','精孔改用鉸刀或搪孔']}];
+const trouble=[{k:'scream',t:'刀具尖叫 / 震動',c:['刀具伸出太長，剛性不足','側吃 ae 或切深 ap 太大','轉速與進給不匹配','工件或刀柄夾持不穩'],f:['縮短刀具伸出量','先降低 ae / ap 20%~40%','維持合理 fz，避免只磨不切','檢查虎鉗、刀柄、拉釘與工件固定']},{k:'burn',t:'燒刀 / 刀具變色',c:['轉速太高','進給太小造成摩擦','冷卻或排屑不足','刀具已磨耗'],f:['降低 Vc 10%~30%','不要讓 fz 太小','加強冷卻與吹氣排屑','換刀或改適合塗層']},{k:'drillBreak',t:'鑽頭容易斷',c:['孔太深未退屑','中心孔不準','鑽頭偏擺','進給過大或材料硬點'],f:['超過 3D 改啄鑽','先中心鑽定位','檢查夾頭與鑽頭偏擺','進給降低 10%~20% 後測試']},{k:'rough',t:'表面粗糙 / 刀痕重',c:['刀具磨耗','精修餘量不合理','進給太快','機台、刀柄或工件震動'],f:['換新刀或精修刀','保留穩定精修餘量','精修時降低 F 或 ae','縮短刀具伸出並檢查夾持']},{k:'holeLarge',t:'孔徑變大',c:['鑽頭偏擺','中心孔偏','鑽頭刃口不對稱','一次鑽太深造成偏移'],f:['先打中心孔','檢查鑽頭與夾頭偏擺','深孔分段退屑','精孔改用鉸刀或搪孔']}];
 let mode='safe',troubleKey='scream';
-const $=id=>document.getElementById(id);function num(id){const v=String($(id).value).replace(',','.').trim();return v===''?null:Number(v)}function fmt(n,d=0){if(!isFinite(n))return'-';return Math.round(n*Math.pow(10,d))/Math.pow(10,d)}function rpmFrom(vc,d){return d>0?1000*vc/(Math.PI*d):0}function setVal(id,v){$(id).value=v}
-function currentMillPreset(){const m=$('millMat').value,t=$('millTool').value;return data[m].mill[t][mode]}function currentDrillPreset(){const m=$('drillMat').value,t=$('drillTool').value;return data[m].drill[t]}
-function updateMillDefaults(force=false){const m=$('millMat').value,mat=data[m],p=currentMillPreset();$('millHint').textContent=mat.hint;if(force){setVal('millVc','');setVal('millFz','');setVal('millMaxF',mat.maxF);setVal('millAp',mat.depthSafe)}if(!$('millMaxF').value)setVal('millMaxF',mat.maxF);calcMill()}
-function calcMill(){const m=$('millMat').value,mat=data[m],p=currentMillPreset();const d=num('millD')||0,z=num('millZ')||0,manualS=num('millS'),vc=num('millVc')??p.vc,fzInput=num('millFz'),fz=fzInput??p.fz,ap=num('millAp')||0,maxF=num('millMaxF')||999999;const rpm=manualS&&manualS>0?manualS:rpmFrom(vc,d);let rawF=rpm*z*fz;let feed=Math.min(rawF,maxF);let actualFz=(rpm*z)>0?feed/(rpm*z):0;$('millRpmOut').textContent=`${fmt(rpm)} rpm`;$('millFeedOut').textContent=`${fmt(feed)} mm/min`;$('millFeedSub').textContent=rawF>maxF?`原公式 F=${fmt(rawF)}，已被上限 ${fmt(maxF)} 限制`:'F = RPM × Z × fz';$('millFzOut').textContent=`${fmt(actualFz,3)} mm/t`;$('millDepthOut').textContent=ap<=mat.depthSafe?'OK':'偏深';$('millDepthSub').textContent=`此材料保守 ap 參考：約 ${mat.depthSafe} mm 起刀；實際仍看 ae、刀長與剛性`;let msg=[];if(fz>0.5){msg.push('⚠️ fz 看起來異常大。銑刀每刃進給通常是 0.01~0.10 這種小數，不是 2。請確認有沒有少打小數點。')}if(m==='aluminum'&&d===12&&z===4&&rpm>=3900&&rpm<=4500){msg.push('鋁 D12 / 4刃 / S4200 附近：F700~1000 較保守，F1200 已接近你現場感覺的快。')}if(rawF>maxF){msg.push('已套用進給上限，避免計算值太誇張。')}if(ap>mat.depthSafe){msg.push('切深高於保守預設，建議先降 ap 或 ae 測聲音與刀痕。')}if(!msg.length)msg.push('目前參數落在保守可測範圍。第一次加工建議先用 70%~85% 進給試切。');$('millStatus').innerHTML=msg.join('<br>')}
-function calcDrill(){const m=$('drillMat').value,mat=data[m],p=currentDrillPreset();$('drillHint').textContent=mat.hint;const d=num('drillD')||0,depth=num('drillDepth')||0,manualS=num('drillS'),vc=num('drillVc')??p.vc;let fr=num('drillFr');if(fr===null){fr=Math.min(d*p.frCoef,p.maxFr)}const rpm=manualS&&manualS>0?manualS:rpmFrom(vc,d);const feed=rpm*fr;const ratio=d>0?depth/d:0;let peck=ratio>3?Math.max(d*0.8,Math.min(d*1.5,depth/4)):depth;$('drillRpmOut').textContent=`${fmt(rpm)} rpm`;$('drillFeedOut').textContent=`${fmt(feed)} mm/min`;$('drillPeckOut').textContent=ratio>3?`${fmt(peck,1)} mm/次`:'可不啄或輕啄';$('drillRatioOut').textContent=`${fmt(ratio,1)}D`;let msg=[];if(ratio>3)msg.push('孔深超過 3D，建議啄鑽退屑。');if(fr>d*0.03)msg.push('⚠️ 每轉進給超過 3%D，對一般標準鑽可能偏大。');if(m==='sus304')msg.push('SUS 鑽孔不要在孔內停留空磨，容易加工硬化。');if(!msg.length)msg.push('目前鑽孔參數落在保守可測範圍。');$('drillStatus').innerHTML=msg.join('<br>')}
-function renderRef(){let html='<table class="miniTable"><thead><tr><th>材料</th><th>鎢鋼銑刀保守</th><th>一般</th><th>上限</th><th>進給上限</th></tr></thead><tbody>';Object.keys(data).forEach(k=>{const m=data[k],c=m.mill.carbide;html+=`<tr><td>${m.name}</td><td>Vc ${c.safe.vc}<br>fz ${c.safe.fz}</td><td>Vc ${c.normal.vc}<br>fz ${c.normal.fz}</td><td>Vc ${c.upper.vc}<br>fz ${c.upper.fz}</td><td>${m.maxF} mm/min</td></tr>`});html+='</tbody></table><div class="hint">注意：網路與刀具廠商數值常假設短刀、剛性好、冷卻好、路徑正確。這裡故意壓低，當作起刀預設。</div>';$('refList').innerHTML=html}
+const $=id=>document.getElementById(id);function num(id){const el=$(id);if(!el)return null;const v=String(el.value).replace(',','.').trim();return v===''?null:Number(v)}function fmt(n,d=0){if(!isFinite(n))return'-';return Math.round(n*Math.pow(10,d))/Math.pow(10,d)}function rpmFrom(vc,d){return d>0?1000*vc/(Math.PI*d):0}function vcFrom(rpm,d){return Math.PI*d*rpm/1000}function setVal(id,v){$(id).value=v}function maxRpm(){return num('maxRpm')||9500}function matOptions(){return Object.entries(materials).map(([k,m])=>`<option value="${k}">${m.name}</option>`).join('')}
+function currentMillPreset(){const m=$('millMat').value,t=$('millTool').value;return materials[m].mill[t][mode]}function currentDrillPreset(){const m=$('drillMat').value,t=$('drillTool').value;return materials[m].drill[t][mode]}
+function calcMill(){const m=$('millMat').value,t=$('millTool').value,mat=materials[m],p=currentMillPreset();$('millHint').textContent=mat.hint;const d=num('millD')||0,z=num('millZ')||0,manualS=num('millS'),vc=num('millVc')??p.vc,fz=num('millFz')??p.fz,ap=num('millAp')||0,ae=num('millAe');let rawRpm=manualS&&manualS>0?manualS:rpmFrom(vc,d);let capped=false;if(rawRpm>maxRpm()){rawRpm=maxRpm();capped=true}const rpm=rawRpm;const actualVc=vcFrom(rpm,d);const feed=rpm*z*fz;$('millRpmOut').textContent=`${fmt(rpm)} rpm`;$('millActualVcOut').textContent=`${fmt(actualVc,1)} m/min`;$('millFeedOut').textContent=`${fmt(feed)} mm/min`;$('millFzOut').textContent=`${fmt(fz,3)} mm/t`;$('millPresetSub').textContent=`${materials[m].name}｜${t==='carbide'?'鎢鋼':'HSS'}｜${modeLabel()}`;let rpmSub='RPM = 1000×Vc÷π÷D';if(manualS&&manualS>0)rpmSub='使用你手動輸入的 S';if(capped)rpmSub+=`｜已受最高 S${maxRpm()} 限制`;$('millRpmSub').textContent=rpmSub;let msg=[];if(capped)msg.push(`⚠️ 依 Vc 會超過 S${maxRpm()}，已自動限制在機台最高轉速。實際 Vc 降為 ${fmt(actualVc,1)} m/min。`);if(fz>0.3)msg.push('⚠️ fz 看起來異常大。銑刀每刃進給通常是 0.005~0.10 這種小數，請確認是否少打小數點。');if(m==='aluminum'&&z>=4)msg.push('鋁用 4刃要特別注意排屑；若開槽或深切，2~3刃通常更好排屑。');if(m==='sus304')msg.push('SUS304 不要空磨，進給太小也會加工硬化；震動時優先降 ae/ap。');if(ap>0&&d>0){const ratio=ap/d;if(ratio>0.5)msg.push(`ap=${fmt(ratio,2)}D，對一般起刀偏深；建議先降切深或側吃測試。`)}if(ae&&d>0){const r=ae/d;if(r>0.5)msg.push(`ae=${fmt(r,2)}D，側吃偏大；若震動，先降 ae。`)}if(!msg.length)msg.push(`目前落在「${modeLabel()}」預設範圍。第一次加工建議先用進給倍率 70%~85% 試切，穩定後每次加 5%~10%。`);$('millStatus').innerHTML=msg.join('<br>')}
+function calcDrill(){const m=$('drillMat').value,t=$('drillTool').value,mat=materials[m],p=currentDrillPreset();$('drillHint').textContent=mat.hint;const d=num('drillD')||0,depth=num('drillDepth')||0,manualS=num('drillS'),vc=num('drillVc')??p.vc,fn=num('drillFn')??(d*p.coef);let rpm=manualS&&manualS>0?manualS:rpmFrom(vc,d);let capped=false;if(rpm>maxRpm()){rpm=maxRpm();capped=true}const feed=rpm*fn,ratio=d>0?depth/d:0;let peckTxt=ratio>3?`${fmt(Math.min(d*1.5,Math.max(d*0.8,depth/4)),1)} mm/次`:'可不啄或輕啄';$('drillRpmOut').textContent=`${fmt(rpm)} rpm`;$('drillFeedOut').textContent=`${fmt(feed)} mm/min`;$('drillFnOut').textContent=`${fmt(fn,3)} mm/rev`;$('drillPeckOut').textContent=peckTxt;$('drillRatioOut').textContent=`孔深 ${fmt(ratio,1)}D`;$('drillPresetSub').textContent=`${materials[m].name}｜${t==='carbide'?'鎢鋼':'HSS'}｜${modeLabel()}`;let msg=[];if(capped)msg.push(`⚠️ 依 Vc 會超過 S${maxRpm()}，已限制在機台最高轉速。`);if(ratio>3)msg.push('孔深超過 3D，建議啄鑽退屑。');if(fn>d*0.03)msg.push('⚠️ fn 超過鑽徑 3%，對一般標準鑽可能偏大。');if(m==='sus304')msg.push('SUS 鑽孔不要在孔內停留空磨，容易加工硬化。');if(!msg.length)msg.push(`目前鑽孔參數落在「${modeLabel()}」預設範圍。`);$('drillStatus').innerHTML=msg.join('<br>')}
+function modeLabel(){return mode==='safe'?'保守':mode==='normal'?'一般':'偏高'}function resetMill(){setVal('millVc','');setVal('millFz','');calcMill()}function resetDrill(){setVal('drillVc','');setVal('drillFn','');calcDrill()}
+function renderRef(){let h='<table class="miniTable"><thead><tr><th>材料</th><th>鎢鋼 保守</th><th>鎢鋼 一般</th><th>鎢鋼 偏高</th><th>HSS 保守</th><th>HSS 一般</th><th>HSS 偏高</th></tr></thead><tbody>';Object.entries(materials).forEach(([k,m])=>{const c=m.mill.carbide,hs=m.mill.hss;h+=`<tr><td>${m.name}</td><td>Vc ${c.safe.vc}<br>fz ${c.safe.fz}</td><td>Vc ${c.normal.vc}<br>fz ${c.normal.fz}</td><td>Vc ${c.upper.vc}<br>fz ${c.upper.fz}</td><td>Vc ${hs.safe.vc}<br>fz ${hs.safe.fz}</td><td>Vc ${hs.normal.vc}<br>fz ${hs.normal.fz}</td><td>Vc ${hs.upper.vc}<br>fz ${hs.upper.fz}</td></tr>`});h+='</tbody></table>';$('millRef').innerHTML=h;let d='<table class="miniTable"><thead><tr><th>材料</th><th>HSS 保守</th><th>HSS 一般</th><th>HSS 偏高</th><th>鎢鋼 保守</th><th>鎢鋼 一般</th><th>鎢鋼 偏高</th></tr></thead><tbody>';Object.entries(materials).forEach(([k,m])=>{const hs=m.drill.hss,c=m.drill.carbide;d+=`<tr><td>${m.name}</td><td>Vc ${hs.safe.vc}<br>fn D×${fmt(hs.safe.coef*100,1)}%</td><td>Vc ${hs.normal.vc}<br>fn D×${fmt(hs.normal.coef*100,1)}%</td><td>Vc ${hs.upper.vc}<br>fn D×${fmt(hs.upper.coef*100,1)}%</td><td>Vc ${c.safe.vc}<br>fn D×${fmt(c.safe.coef*100,1)}%</td><td>Vc ${c.normal.vc}<br>fn D×${fmt(c.normal.coef*100,1)}%</td><td>Vc ${c.upper.vc}<br>fn D×${fmt(c.upper.coef*100,1)}%</td></tr>`});d+='</tbody></table>';$('drillRef').innerHTML=d}
 function renderTrouble(){const box=$('troubleBtns');box.innerHTML='';trouble.forEach(x=>{const b=document.createElement('button');b.className='troubleBtn '+(x.k===troubleKey?'active':'');b.textContent=x.t;b.onclick=()=>{troubleKey=x.k;renderTrouble()};box.appendChild(b)});const cur=trouble.find(x=>x.k===troubleKey);$('troubleTitle').textContent=cur.t;$('causeList').innerHTML=cur.c.map(v=>`<li>${v}</li>`).join('');$('fixList').innerHTML=cur.f.map(v=>`<li>${v}</li>`).join('')}
-function loadNotes(){let arr=[];try{arr=JSON.parse(localStorage.getItem('cncNotesV12')||'[]')}catch(e){}$('noteList').innerHTML=arr.map((n,i)=>`<div class="note"><div class="small">筆記 ${arr.length-i}</div><div>${n}</div></div>`).join('')}function addNote(){const v=$('noteInput').value.trim();if(!v)return;let arr=[];try{arr=JSON.parse(localStorage.getItem('cncNotesV12')||'[]')}catch(e){}arr.unshift(v);localStorage.setItem('cncNotesV12',JSON.stringify(arr));$('noteInput').value='';loadNotes()}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');$(b.dataset.tab).classList.add('active')});document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('active'));b.classList.add('active');updateMillDefaults(true)});['millMat','millTool'].forEach(id=>$(id).addEventListener('change',()=>updateMillDefaults(true)));['millD','millZ','millS','millVc','millFz','millAp','millMaxF'].forEach(id=>$(id).addEventListener('input',calcMill));['drillMat','drillTool'].forEach(id=>$(id).addEventListener('change',()=>{setVal('drillVc','');setVal('drillFr','');calcDrill()}));['drillD','drillDepth','drillS','drillVc','drillFr'].forEach(id=>$(id).addEventListener('input',calcDrill));$('presetAlu12').onclick=()=>{setVal('millMat','aluminum');setVal('millTool','carbide');mode='safe';document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('active',x.dataset.mode==='safe'));setVal('millD','12');setVal('millZ','4');setVal('millS','4200');setVal('millVc','');setVal('millFz','');setVal('millAp','2');setVal('millMaxF','1200');updateMillDefaults(false)};$('millReset').onclick=()=>updateMillDefaults(true);$('drillReset').onclick=()=>{setVal('drillS','');setVal('drillVc','');setVal('drillFr','');calcDrill()};$('addNote').onclick=addNote;$('clearNotes').onclick=()=>{if(confirm('確定清空筆記？')){localStorage.removeItem('cncNotesV12');loadNotes()}};
-renderRef();renderTrouble();loadNotes();updateMillDefaults(false);calcDrill();
+function loadNotes(){let arr=[];try{arr=JSON.parse(localStorage.getItem('cncNotesV13')||'[]')}catch(e){}$('noteList').innerHTML=arr.map((n,i)=>`<div class="note"><div class="small">筆記 ${arr.length-i}</div><div>${n.replace(/\n/g,'<br>')}</div></div>`).join('')}function addNote(){const v=$('noteInput').value.trim();if(!v)return;let arr=[];try{arr=JSON.parse(localStorage.getItem('cncNotesV13')||'[]')}catch(e){}arr.unshift(v);localStorage.setItem('cncNotesV13',JSON.stringify(arr));$('noteInput').value='';loadNotes()}function saveSettings(){localStorage.setItem('cncMaxRpmV13',String(maxRpm()))}
+function switchTab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id))}
+function setup(){const opt=matOptions();$('millMat').innerHTML=opt;$('drillMat').innerHTML=opt;const saved=localStorage.getItem('cncMaxRpmV13');if(saved) $('maxRpm').value=saved;document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));document.querySelectorAll('#modeSeg button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll('#modeSeg button').forEach(x=>x.classList.toggle('active',x.dataset.mode===mode));resetMill();resetDrill()});['maxRpm'].forEach(id=>$(id).addEventListener('input',()=>{saveSettings();calcMill();calcDrill()}));['millMat','millTool'].forEach(id=>$(id).addEventListener('change',()=>{resetMill()}));['millD','millZ','millS','millVc','millFz','millAp','millAe'].forEach(id=>$(id).addEventListener('input',calcMill));['drillMat','drillTool'].forEach(id=>$(id).addEventListener('change',()=>{resetDrill()}));['drillD','drillDepth','drillS','drillVc','drillFn'].forEach(id=>$(id).addEventListener('input',calcDrill));$('millReset').onclick=resetMill;$('drillReset').onclick=resetDrill;$('addNote').onclick=addNote;$('clearNotes').onclick=()=>{if(confirm('確定清空筆記？')){localStorage.removeItem('cncNotesV13');loadNotes()}};$('exAlu12').onclick=()=>{switchTab('milling');setVal('millMat','aluminum');setVal('millTool','carbide');setVal('millD','12');setVal('millZ','4');setVal('millS','4200');setVal('millAp','2');setVal('millAe','');resetMill()};$('exS45C10').onclick=()=>{switchTab('milling');setVal('millMat','s45c');setVal('millTool','carbide');setVal('millD','10');setVal('millZ','4');setVal('millS','');setVal('millAp','1');setVal('millAe','1');resetMill()};$('exSus8').onclick=()=>{switchTab('milling');setVal('millMat','sus304');setVal('millTool','carbide');setVal('millD','8');setVal('millZ','4');setVal('millS','');setVal('millAp','0.5');setVal('millAe','0.5');resetMill()};$('exDrill68').onclick=()=>{switchTab('drilling');setVal('drillMat','s45c');setVal('drillTool','hss');setVal('drillD','6.8');setVal('drillDepth','20');setVal('drillS','');resetDrill()};renderRef();renderTrouble();loadNotes();calcMill();calcDrill()}
+setup();
 </script>
 </body>
 </html>
